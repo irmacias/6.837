@@ -77,7 +77,10 @@ Renderer::traceRay(const Ray &r,
     // You will implement phong shading, recursive ray tracing, and shadow rays.
 
     // TODO: IMPLEMENT 
-    if (_scene.getGroup()->intersect(r, tmin, h)) {
+	Material * material = h.getMaterial();
+	
+	
+	if (_scene.getGroup()->intersect(r, tmin, h)) {
         return h.getMaterial()->getDiffuseColor();
     } else {
         return Vector3f(0, 0, 0);
