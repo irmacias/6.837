@@ -79,26 +79,83 @@ bool Group::intersect(const Ray &r, float tmin, Hit &h) const
 
 
 Plane::Plane(const Vector3f &normal, float d, Material *m) : Object3D(m) {
-    // TODO implement Plane constructor
+	_normal = normal;
+	_d = d;
+	material = m;
 }
 bool Plane::intersect(const Ray &r, float tmin, Hit &h) const
 {
-    // TODO implement
-    return false;
+	float numerator = _d - Vector3f().dot(_normal, r.getOrigin());
+	float denominator = Vector3f().dot(_normal, r.getDirection());
+	float t = numerator / denominator;
+
+	if (t < tmin || t >= h.getT()) {
+		return false;
+	}
+	h.set(t, material, _normal.normalized());
+	return true;
 }
 bool Triangle::intersect(const Ray &r, float tmin, Hit &h) const 
 {
-    // TODO implement
-    return false;
+	Vector3f r_d = r.getDirection();
+	Vector3f r_o = r.getOrigin();
+
+	Vector3f a1(_v[0].x() - _v[1].x(), _v[0].x() - _v[2].x(), r_d.x());
+	Vector3f a2(_v[0].y() - _v[1].y(), _v[0].y() - _v[2].y(), r_d.y());
+	Vector3f a3(_v[0].z() - _v[1].z(), _v[0].z() - _v[2].z(), r_d.z());
+
+	Vector3f t1(_v[0].x() - _v[1].x(), _v[0].x() - _v[2].x(), _v[0].x() - r_o.x());
+	Vector3f t2(_v[0].y() - _v[1].y(), _v[0].y() - _v[2].y(), _v[0].y() - r_o.y());
+	Vector3f t3(_v[0].z() - _v[1].z(), _v[0].z() - _v[2].z(), _v[0].z() - r_o.z());
+
+	Vector3f b1(_v[0].x() - r_o.x(), _v[0].x() - _v[2].x(), r_d.x());
+	Vector3f b2(_v[0].y() - r_o.y(), _v[0].y() - _v[2].y(), r_d.y());
+	Vector3f b3(_v[0].z() - r_o.z(), _v[0].z() - _v[2].z(), r_d.z());
+
+	Vector3f y1(_v[0].x() - _v[1].x(), _v[0].x() - r_o.x(), r_d.x());
+	Vector3f y2(_v[0].y() - _v[1].y(), _v[0].y() - r_o.y(), r_d.y());
+	Vector3f y3(_v[0].z() - _v[1].z(), _v[0].z() - r_o.z(), r_d.z());
+
+	Matrix3f A(a1, a2, a3);
+	float detA = A.determinant();
+
+	Matrix3f B(b1, b2, b3);
+	Matrix3f T(t1, t2, t3);
+	Matrix3f Y(y1, y2, y3);
+
+	float beta = B.determinant() / detA;
+	float gamma = Y.determinant() / detA;
+	float alpha = 1 - beta - gamma;
+	float t = T.determinant() / detA;
+
+	if (t < tmin || t >= h.getT() || beta + gamma > 1 || beta < 0 || gamma < 0) {
+		return false;
+	}
+	Vector3f normal = getNormal(0) * alpha + getNormal(1) * beta + getNormal(2) * gamma;
+	h.set(t, material, normal.normalized());
+	return true;
 }
 
 
 Transform::Transform(const Matrix4f &m,
     Object3D *obj) : _object(obj) {
-    // TODO implement Transform constructor
+	_transform = m;
+	_invTransform = m.inverse();
+	_transposedTransform = m.inverse().transposed();
 }
 bool Transform::intersect(const Ray &r, float tmin, Hit &h) const
 {
-    // TODO implement
-    return false;
+	Vector4f direction = Vector4f(r.getDirection(), 0);
+	Vector4f position = Vector4f(r.getOrigin(), 1);
+
+	Vector3f oDirection = (_invTransform * direction).xyz();
+	Vector3f oPosition = (_invTransform * position).xyz();
+	Ray transformedRay = Ray(oPosition, oDirection);
+	bool intersected = _object->intersect(transformedRay, tmin, h);
+	if (intersected) {
+		Vector4f normal = Vector4f(h.getNormal(), 0);
+		Vector3f wNormal = (_transposedTransform * normal).xyz().normalized();
+		h.set(h.getT(), h.getMaterial(), wNormal);
+	}
+	return intersected;
 }

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\stb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\ArgParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\CubeMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Material.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Object3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Octree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\SceneParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\VecUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\ArgParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\CubeMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Ray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Object3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Octree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\Renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\SceneParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\VecUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\stb_image.h">
+      <Filter>stb</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\src\stb_image_write.h">
+      <Filter>stb</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Israel\Documents\GitHub\6.837\starter4\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1BA03CD9-63F6-38AF-8114-209BD95044D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A445F985-16E7-302F-88A4-423979CB78D2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stb">
+      <UniqueIdentifier>{E3AF7B02-CF3D-3EF6-870A-C7BFFFFBD7AD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

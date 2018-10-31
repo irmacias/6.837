@@ -77,13 +77,45 @@ Renderer::traceRay(const Ray &r,
     // You will implement phong shading, recursive ray tracing, and shadow rays.
 
     // TODO: IMPLEMENT 
-	Material * material = h.getMaterial();
-	
-	
 	if (_scene.getGroup()->intersect(r, tmin, h)) {
-        return h.getMaterial()->getDiffuseColor();
+        Vector3f diffuseColor = h.getMaterial()->getDiffuseColor();
+		Vector3f I = _scene.getAmbientLight() * diffuseColor;
+		Vector3f p = r.pointAtParameter(h.getT());
+
+		Vector3f specularColor = h.getMaterial()->getSpecularColor();
+		bool isSpecular = specularColor[0] > 0 || specularColor[1] > 0 || specularColor[2] > 0;
+		if (isSpecular && bounces > 0) {
+			Vector3f E = r.getDirection();
+			Vector3f N = h.getNormal();
+			Vector3f R = E - 2 * (Vector3f::dot(E, N) * N);
+			
+			Ray reflectedRay = Ray(p, R.normalized());
+			Hit newHit = Hit();
+			Vector3f reflection = traceRay(reflectedRay, 0.0001, bounces - 1, newHit);
+			I += specularColor * reflection;
+		}
+		for (int i = 0; i < _scene.getNumLights(); ++i) {
+			Light* light = _scene.getLight(i);
+
+			Vector3f directionToLight = Vector3f(0, 0, 0);
+			Vector3f intensity = Vector3f(0, 0, 0);
+			float distance;
+			light->getIllumination(p, directionToLight, intensity, distance);
+			Vector3f shading = h.getMaterial()->shade(r, h, directionToLight, intensity);
+			directionToLight = directionToLight.normalized();
+			if (_args.shadows) {
+				Ray surfaceToLight = Ray(p, directionToLight);
+				Hit shadowHit = Hit();
+				if (_scene.getGroup()->intersect(surfaceToLight, 0.0001, shadowHit) && shadowHit.getT() < distance) {
+					continue;
+				}
+			}
+
+			I += shading;
+		}
+		return I;
     } else {
-        return Vector3f(0, 0, 0);
+        return _scene.getBackgroundColor(r.getDirection());
     };
 }
 

@@ -1,0 +1,4 @@
+C:/Users/Israel/Documents/GitHub/6.837/starter4/build/CMakeFiles/a4.dir
+C:/Users/Israel/Documents/GitHub/6.837/starter4/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Israel/Documents/GitHub/6.837/starter4/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Israel/Documents/GitHub/6.837/starter4/build/vecmath/CMakeFiles/vecmath.dir

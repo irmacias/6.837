@@ -1,0 +1,23 @@
+﻿  Building Custom Rule C:/Users/Israel/Documents/GitHub/6.837/starter4/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/Israel/Documents/GitHub/6.837/starter4/build/CMakeFiles/generate.stamp is up-to-date.
+  main.cpp
+  stb.cpp
+  ArgParser.cpp
+  Camera.cpp
+  CubeMap.cpp
+  Image.cpp
+  Light.cpp
+  Material.cpp
+  Mesh.cpp
+c:\users\israel\documents\github\6.837\starter4\src\mesh.cpp(85): warning C4018: '<': signed/unsigned mismatch
+c:\users\israel\documents\github\6.837\starter4\src\mesh.cpp(93): warning C4018: '<': signed/unsigned mismatch
+c:\users\israel\documents\github\6.837\starter4\src\mesh.cpp(98): warning C4018: '<': signed/unsigned mismatch
+  Object3D.cpp
+  Octree.cpp
+  Renderer.cpp
+c:\users\israel\documents\github\6.837\starter4\src\renderer.cpp(94): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\israel\documents\github\6.837\starter4\src\renderer.cpp(109): warning C4305: 'argument': truncation from 'double' to 'float'
+  SceneParser.cpp
+  VecUtils.cpp
+  Generating Code...
+  a4.vcxproj -> C:\Users\Israel\Documents\GitHub\6.837\starter4\build\Debug\a4.exe

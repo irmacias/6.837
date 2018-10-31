@@ -1,0 +1,11 @@
+﻿  Building Custom Rule C:/Users/Israel/Documents/GitHub/6.837/starter4/vecmath/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/Israel/Documents/GitHub/6.837/starter4/build/vecmath/CMakeFiles/generate.stamp is up-to-date.
+  Matrix2f.cpp
+  Matrix3f.cpp
+  Matrix4f.cpp
+  Quat4f.cpp
+  Vector2f.cpp
+  Vector3f.cpp
+  Vector4f.cpp
+  Generating Code...
+  vecmath.vcxproj -> C:\Users\Israel\Documents\GitHub\6.837\starter4\build\vecmath\Debug\vecmath.lib
