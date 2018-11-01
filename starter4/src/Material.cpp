@@ -7,7 +7,7 @@ Vector3f Material::shade(const Ray &ray,
 
 	//diffuse
 	Vector3f E = ray.getDirection();
-	Vector3f N = hit.getNormal().normalized();
+	Vector3f N = hit.getNormal();
 
 	float dot = Vector3f::dot(dirToLight, N);
 	float clamped_diffuse = 0;
