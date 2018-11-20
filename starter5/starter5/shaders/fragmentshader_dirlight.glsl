@@ -20,6 +20,9 @@ uniform float alpha;
 
 uniform vec3 lightPos;
 uniform vec3 lightDiff;
+uniform sampler2D diffuseTex;
+uniform sampler2D shadowTex;
+uniform mat4 light_VP;
 
 layout(location=0) out vec4 out_Color;
 
@@ -51,7 +54,6 @@ vec4 blinn_phong(vec3 kd) {
 void main () {
 	// TODO implement texture mapping here
 	// TODO implement shadow mapping here
-
-    vec3 kd = diffColor;
-    out_Color = vec4(ambientColor + blinn_phong(kd).xyz, 1);
+    vec3 kd = texture(diffuseTex, var_Color.xy).xyz;
+	out_Color = vec4(ambientColor + blinn_phong(kd).xyz, 1);
 }

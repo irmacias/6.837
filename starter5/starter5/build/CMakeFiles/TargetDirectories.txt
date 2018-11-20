@@ -1,0 +1,6 @@
+C:/Users/Israel/GitHub/6.837/starter5/starter5/build/CMakeFiles/a5.dir
+C:/Users/Israel/GitHub/6.837/starter5/starter5/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Israel/GitHub/6.837/starter5/starter5/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Israel/GitHub/6.837/starter5/starter5/build/3rd_party/glfw/CMakeFiles/ALL_BUILD.dir
+C:/Users/Israel/GitHub/6.837/starter5/starter5/build/3rd_party/glfw/src/CMakeFiles/glfw.dir
+C:/Users/Israel/GitHub/6.837/starter5/starter5/build/vecmath/CMakeFiles/vecmath.dir

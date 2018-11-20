@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\3rd_party\glew\src\glew.c">
+      <Filter>GLEW</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\3rd_party\lodepng\lodepng.cpp">
+      <Filter>lodepng</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\starter5_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\vertexrecorder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\objparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\stb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\3rd_party\lodepng\lodepng.h">
+      <Filter>lodepng</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\gl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\starter5_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\vertexrecorder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\objparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\src\renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\shaders\vertexshader.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\shaders\fragmentshader_color.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\shaders\fragmentshader_dirlight.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\shaders\diffuse_nolight.glsl">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="GLEW">
+      <UniqueIdentifier>{82C92407-D0CC-35DD-AA37-49A2F77AB41C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{73007BE3-AA4C-3E9F-AD13-4E30B19E8C04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{05479646-842B-378B-A3B6-DBA778940FBC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lodepng">
+      <UniqueIdentifier>{E3EE1E3F-71F2-3CA2-80D0-A4F070DDC413}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{11C61C0D-5AF5-3BAC-8F1D-824F0D6418F6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

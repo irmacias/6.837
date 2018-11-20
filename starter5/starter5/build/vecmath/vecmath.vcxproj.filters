@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\Matrix2f.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\Matrix3f.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\Matrix4f.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\Quat4f.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\Vector2f.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\Vector3f.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\Vector4f.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\include\Matrix2f.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\include\Matrix3f.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\include\Matrix4f.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\include\Quat4f.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\include\Vector2f.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\include\Vector3f.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\include\Vector4f.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\include\vecmath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Israel\GitHub\6.837\starter5\starter5\vecmath\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{73007BE3-AA4C-3E9F-AD13-4E30B19E8C04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{05479646-842B-378B-A3B6-DBA778940FBC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+﻿  Building Custom Rule C:/Users/Israel/GitHub/6.837/starter5/starter5/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/Israel/GitHub/6.837/starter5/starter5/build/CMakeFiles/generate.stamp is up-to-date.
+  glew.c
+  lodepng.cpp
+  main.cpp
+C:\Users\Israel\GitHub\6.837\starter5\starter5\src\main.cpp(68): warning C4018: '<': signed/unsigned mismatch
+  starter5_util.cpp
+  camera.cpp
+  vertexrecorder.cpp
+  objparser.cpp
+  stb.cpp
+  renderer.cpp
+  Generating Code...
+  a5.vcxproj -> C:\Users\Israel\GitHub\6.837\starter5\starter5\build\Debug\a5.exe
