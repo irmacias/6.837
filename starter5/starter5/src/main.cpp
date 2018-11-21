@@ -82,7 +82,7 @@ void drawScene(GLint program, Matrix4f V, Matrix4f P) {
 		glUniform1i(loc, 1);
 
 		int light_vp_loc = glGetUniformLocation(program, "light_VP");
-		glUniformMatrix4fv(light_vp_loc, 1, false, getLightProjection());
+		glUniformMatrix4fv(light_vp_loc, 1, false, getLightProjection() * getLightView());
 		recorder.draw();
 	}
 }
@@ -115,17 +115,20 @@ void freeTextures()
 }
 
 void loadFramebuffer() {
+
 	//Color Texture
 	glGenTextures(1, &fb_colortex);
 	glBindTexture(GL_TEXTURE_2D, fb_colortex);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, SHADOW_WIDTH, SHADOW_HEIGHT, 0, GL_RGB, GL_UNSIGNED_BYTE, nullptr);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 
+
 	//Depth Texture
 	glGenTextures(1, &fb_depthtex);
 	glBindTexture(GL_TEXTURE_2D, fb_depthtex);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT32F, SHADOW_WIDTH, SHADOW_HEIGHT, 0, GL_DEPTH_COMPONENT, GL_FLOAT, nullptr);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+
 
 	//Framebuffer
 	glGenFramebuffers(1, &fb);
@@ -179,19 +182,18 @@ void draw() {
 	drawTexturedQuad(fb_depthtex);
 
 	glViewport(256, 0, 256, 256);
-	drawTexturedQuad(fb_colortex);
+	drawTexturedQuad(fb_colortex); 
 }
 
 Matrix4f getLightView()
 {
-	Vector3f eye = Vector3f(light_dir.x(), -light_dir.y(), light_dir.z());
-	Matrix4f view = Matrix4f::lookAt(eye, Vector3f(0, 0, camera.GetDistance()), Vector3f::cross(light_dir, Vector3f(0, 0, 0)));
+	Matrix4f view = Matrix4f::lookAt(camera.GetCenter() + light_dir, camera.GetCenter(), Vector3f::cross(Vector3f(0,0,-1), light_dir).normalized());
 	return view;
 }
 
 Matrix4f getLightProjection()
 {
-	Matrix4f projection = Matrix4f::orthographicProjection(SHADOW_WIDTH, SHADOW_HEIGHT, 0, camera.GetDistance());
+	Matrix4f projection = Matrix4f::orthographicProjection(50, 50, -10.0f, 10.0f);
 	return projection;
 }
 

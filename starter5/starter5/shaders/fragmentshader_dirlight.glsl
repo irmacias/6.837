@@ -54,6 +54,20 @@ vec4 blinn_phong(vec3 kd) {
 void main () {
 	// TODO implement texture mapping here
 	// TODO implement shadow mapping here
-    vec3 kd = texture(diffuseTex, var_Color.xy).xyz;
-	out_Color = vec4(ambientColor + blinn_phong(kd).xyz, 1);
+	vec4 x_world = vec4(var_Position, 1);
+
+	vec4 x_ndc = light_VP * x_world;
+	vec4 x_tex = (x_ndc + vec4(1.0, 1.0, 1.0, 1.0)) / 2.0;
+
+    float occluder_depth = texture(shadowTex, x_tex.xy).r;
+	float this_depth = x_tex.z;
+	float bias = 0.01;
+	
+	vec3 kd = texture(diffuseTex, var_Color.xy).xyz;
+	if (occluder_depth + bias < this_depth) {
+		out_Color += vec4(ambientColor + blinn_phong(kd).xyz, 1) * 0.7;
+	} 
+	else {
+		out_Color += vec4(ambientColor + blinn_phong(kd).xyz, 1);
+	}
 }
