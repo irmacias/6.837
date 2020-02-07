@@ -17,4 +17,3 @@ Compilation
 
 5. None of the extra credit.
 
-6. Ray casting / ray tracing is extremely interesting and pretty cool to work with. Because of this, I've actually started dabbling in Unity to try out some of the lighting features and found what we learned in class and through the lab to be useful!s
